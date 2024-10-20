@@ -1,0 +1,46 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    // Write C code here
+    //Problem: Write a function that takes an array of integers and returns the second largest element. If there is no second largest element, return -1.
+    int (a);
+    printf("Enter an array: \n");
+    scanf("%d",&a);
+    
+    if (a<=0){
+        printf("Invalid array\n");
+        return -1;
+    }
+    int arr[a];
+    for (int i=0;i<a;i++){
+        scanf("%d", &arr[i]);
+    }
+    
+    printf("You entered: \n");
+    for(int i=0;i<a;i++){
+        printf("%d\n",arr[i]);
+    }
+    int (i);
+    int largest_e = (arr[0]);
+    int second_l = (-1);
+    for(int i=0;i<a;i++){
+        if(arr[i]>largest_e){
+            second_l=largest_e;
+            largest_e=arr[i];
+        }else if(arr[i]>second_l && largest_e!=arr[i]){
+            second_l=arr[i];
+        }
+        
+    }
+     if (second_l == -1) {
+        printf("There is no second largest element\n");
+    } else {
+        printf("The second largest element is: %d\n", second_l);
+    }
+  
+
+    
+
+    return 0;
+}
